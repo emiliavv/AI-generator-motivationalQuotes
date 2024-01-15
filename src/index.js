@@ -1,5 +1,6 @@
 function generateQuote(event) {
-    let quote = document.querySelector(".quote");
+    event.preventDefault();
+    let quote = document.querySelector(".quote")
     new Typewriter('.quote', {
   strings: "Hello",
   autoStart: true,
@@ -8,5 +9,5 @@ function generateQuote(event) {
 });
 }
 
-let button = document.querySelector("button");
-button.addEventListener("click", generateQuote);
+let submit = document.querySelector("form")
+submit.addEventListener("submit", generateQuote);
